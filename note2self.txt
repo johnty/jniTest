@@ -1,0 +1,3 @@
+- compiling the native code requires access to jni.h (somewhere in system)
+- package name gets embedded into native function names (through javah), so make sure implementations are also updated!
+- running the .class file with main(): java package.file (or package/file)
