@@ -1,3 +1,14 @@
 - compiling the native code requires access to jni.h (somewhere in system)
 - package name gets embedded into native function names (through javah), so make sure implementations are also updated!
 - running the .class file with main(): java package.file (or package/file)
+- for Windows, --add-stdcall-alias should be added when making the DLL
+
+Strings:
+- To get a C-string (char*) from JNI string (jstring), invoke method const char* GetStringUTFChars(JNIEnv*, jstring, jboolean*).
+- To get a JNI string (jstring) from a C-string (char*), invoke method jstring NewStringUTF(JNIEnv*, char*).
+
+Arrays:
+
+- jint[] == native; jintArray == JNI
+- (*env)->GetXXXArrayElements() pins the JNI array to native array.
+- ->must be released after!
