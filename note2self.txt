@@ -12,3 +12,10 @@ Arrays:
 - jint[] == native; jintArray == JNI
 - (*env)->GetXXXArrayElements() pins the JNI array to native array.
 - ->must be released after!
+
+Callbacks:
+
+-get reference to object class
+-get method id using signature (can use javap on .java file to look at signature -s and private members -p)
+-call using Call(Static)XXMethod() where XX={Primative type, Void, Object};
+- can also use CallNonvirtualXXMethod() to get to superclass
