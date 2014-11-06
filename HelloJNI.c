@@ -1,6 +1,6 @@
 #include <jni.h>
 #include <stdio.h>
-#include "HelloJNI.h"
+#include "testjni_HelloJNI.h"
 
 JNIEXPORT void JNICALL Java_HelloJNI_sayHello(JNIEnv *env, jobject thiz) {
    printf("Hello World!\n");

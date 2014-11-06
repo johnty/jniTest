@@ -1,3 +1,5 @@
+package testjni;
+
 public class HelloJNI {
    static {
       //System.load("/Users/johnty/dev/jniTest/libhello.so");
