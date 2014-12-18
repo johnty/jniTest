@@ -16,4 +16,13 @@ public class MoreFuncs {
         System.out.println("Called from native C code; callcount = "+callCount);
         
     }
+
+    public static void sendData(byte[] data) {
+    }
+
+    public static void sendData(byte[] data, int len) {
+    }
+
+    public static void test(int num) {
+    }
 }
